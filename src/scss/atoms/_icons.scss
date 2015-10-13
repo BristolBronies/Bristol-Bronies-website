@@ -25,30 +25,27 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon--donate:before {
-	content: "\e024";
-}
-.icon--search:before {
-	content: "\e036";
-}
-.icon--check:before {
-	content: "\e042";
-}
-.icon--cross:before {
-	content: "\e043";
-}
-.icon--arrow-left:before {
-	content: "\e094";
-}
-.icon--arrow-right:before {
-	content: "\e095";
-}
-.icon--arrow-up:before {
-	content: "\e096";
-}
-.icon--arrow-down:before {
-	content: "\e097";
-}
-.icon--menu:before {
-	content: "\e120";
+$icons: (
+	// Navigation 
+	menu: "\e120",
+	donate: "\e024",
+	search: "\e036",
+	rules: "\e077",
+	// Generic UI
+	check: "\e042",
+	cross: "\e043",
+	arrow-left: "\e094",
+	arrow-right: "\e095",
+	arrow-up: "\e096",
+	arrow-down: "\e097",
+	// Social
+	social-web: "\e078",
+	social-twitter: "\e800",
+	social-facebook: "\e801",
+	social-tumblr: "\e802",
+	social-github: "\e803"
+);
+
+@each $icon, $code in $icons {
+	.icon--#{$icon}::before { content: quote(#{$code}); }
 }

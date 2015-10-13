@@ -1,0 +1,27 @@
+.stat {
+	@include mq(tos, true) {
+		font-size: em-calc(20px);
+	}
+	@include mq(tng, true) {
+		font-size: em-calc(40px);
+	}
+	@include mq(ds9, true) {
+		font-size: em-calc(60px);
+	}
+	@include mq(voy, true) {
+		font-size: em-calc(80px);
+	}
+	&__value {
+		@include header-font;
+		color: palette(shade, white);
+		font-size: em-calc(38px);
+		line-height: .9;
+	}
+	&__label {
+		@include body-font;
+		color: palette(shade, white);
+		font-weight: bold;
+		text-transform: uppercase;
+		opacity: .75;
+	}
+}

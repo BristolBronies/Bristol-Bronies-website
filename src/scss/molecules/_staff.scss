@@ -1,0 +1,48 @@
+.staff {
+	position: relative;
+	overflow: hidden;
+	&__banner {
+		height: 120px;
+		background-image: url("../images/background-texture.png");
+		background-position: center;
+		background-size: 1000px auto;
+		&--custom {
+			background-size: cover;
+			animation-name: none;
+		}
+	}
+	&__avatar {
+		display: block;
+		width: 120px;
+		margin: -95px auto 0;
+		border: 5px solid palette(shade, white);
+		border-radius: 3px;
+		box-shadow: 0 0 3px 0 rgba(palette(shade, black), .2);
+	}
+	&__body {
+		padding: 20px;
+		text-align: center;
+	}
+	&__name {
+		@include header-sisko;
+	}
+	&__content {
+
+	}
+	&__social-links {
+		list-style: none;
+	}
+	&__item {
+		display: inline-block;
+		margin-right: 10px;
+		margin-left: 10px;
+		word-wrap: nowrap;
+	}
+	&__link {
+		
+	}
+	&__icon {
+		font-size: em-calc(21px);
+		vertical-align: text-bottom;
+	}
+}

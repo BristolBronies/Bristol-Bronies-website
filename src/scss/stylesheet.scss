@@ -21,6 +21,8 @@
 @import "molecules/metadata";
 @import "molecules/avatar-grid";
 @import "molecules/pagination";
+@import "molecules/stat";
+@import "molecules/staff";
 
 // Organisms
 // e.g. @import "organisms/dataset";
@@ -35,6 +37,7 @@
 // Templates
 // e.g. @import "templates/datasheet";
 @import "templates/template-homepage";
+@import "templates/template-about";
 @import "templates/template-archive";
 @import "templates/template-error-page";
 

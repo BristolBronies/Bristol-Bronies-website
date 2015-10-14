@@ -20,18 +20,35 @@
 ?>
 
 	<main class="body" id="content" role="main">
+		<?php 
+			while ( have_posts() ) : the_post(); 
+		?>
 		<div class="template-about__media">
-			<video class="template-about__media__video" width="720" height="480" autoplay loop>
+			<!--<video class="template-about__media__video" width="720" height="480" autoplay loop>
 				<source src="<?php echo get_template_directory_uri(); ?>/dst/video/rainbowrocks.mp4" type="video/mp4">
 				<source src="<?php echo get_template_directory_uri(); ?>/dst/video/rainbowrocks.webm" type="video/webm">
 				<source src="<?php echo get_template_directory_uri(); ?>/dst/video/rainbowrocks.ogv" type="video/ogg">
-			</video>
+			</video>-->
+			<?php 
+				if(has_post_thumbnail()):
+					$image_url[0] = wp_get_attachment_image_src(get_post_thumbnail_id(), "article-small")[0];
+					$image_url[1] = wp_get_attachment_image_src(get_post_thumbnail_id(), "article-medium")[0];
+					$image_url[2] = wp_get_attachment_image_src(get_post_thumbnail_id(), "article-large")[0];
+			?>
+			<picture class="template-about__media__video">
+				<!--[if IE 9]><video style="display:none;"><[endif]-->
+				<source srcset="<?php echo $image_url[0]; ?>" media="(min-width: 0px)">
+				<source srcset="<?php echo $image_url[1]; ?>" media="(min-width: 600px)">
+				<source srcset="<?php echo $image_url[2]; ?>" media="(min-width: 1024px)">
+				<!--[if IE 9]></video><![endif]-->
+				<img srcset="<?php echo $image_url[2] ?>" alt="">
+			</picture>
+			<?php
+				endif;
+			?>
 		</div>
 		<section class="template-about__stats">
 			<div class="template-about__stats__inner">
-				<div class="template-about__stats__title">
-					<?php bloginfo("name"); ?> so far&hellip;
-				</div>
 				<div class="stat template-about__stats__item">
 					<div class="stat__value"><?php echo $meet_count; ?></div>
 					<div class="stat__label">events</div>
@@ -46,7 +63,6 @@
 				</div>
 			</div>
 		</section>
-		<?php while ( have_posts() ) : the_post(); ?>
 		<section class="template-about__intro">
 			<div class="layout">
 				<div class="content">
@@ -54,7 +70,9 @@
 				</div>
 			</div>
 		</section>
-		<?php endwhile; ?>
+		<?php 
+			endwhile; 
+		?>
 		<?php 
 			$staff = new WP_Query('post_type=meet_runner&posts_per_page=-1&orderby=title&order=ASC');
 			if($staff->have_posts()):

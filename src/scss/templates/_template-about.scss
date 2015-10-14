@@ -7,15 +7,21 @@
 		transition: padding-bottom .35s ease;
 		@include mq(tng, true) {
 			margin-top: -40px;
-			padding-bottom: 25%;
 		}
-		&__video {
+		&__video,
+		&__image {
 			width: 100%;
 			height: auto;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
+		}
+		&__video {
+			
+		}
+		&__image {
+
 		}
 	}
 	&__stats {
@@ -27,6 +33,7 @@
 			padding-top: 20px;
 			padding-bottom: 20px;
 			position: relative;
+			white-space: nowrap;
 		}
 		&__title {
 			display: inline-block;
@@ -43,6 +50,7 @@
 			padding-right: 2.5%;
 			padding-left: 2.5%;
 			text-align: left;
+			
 		}
 	}
 	&__intro {

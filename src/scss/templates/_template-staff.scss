@@ -1,0 +1,27 @@
+.template-staff {
+	&__staff {
+		max-width: 1440px;
+		margin-right: auto;
+		margin-left: auto;
+		overflow: hidden;
+		&__item {
+			@include mq(tos) {
+				width: 50%;
+				float: left;
+				&:nth-child(2n+1) {
+					clear: left;
+				}
+			}
+			@include mq(tng) {
+				width: 33.3333%;
+				float: left;
+				&:nth-child(2n+1) {
+					clear: none;
+				}
+				&:nth-child(3n+1) {
+					clear: left;
+				}
+			}
+		}
+	}
+}

@@ -73,52 +73,6 @@
 		<?php 
 			endwhile; 
 		?>
-		<?php 
-			$staff = new WP_Query('post_type=meet_runner&posts_per_page=-1&orderby=title&order=ASC');
-			if($staff->have_posts()):
-		?>
-		<section class="template-about__staff">
-			<?php 
-				while($staff->have_posts()): $staff->the_post();
-					if(get_field("runner_staff") == true): 
-			?>
-						<article class="staff template-about__staff__item">
-							<div class="staff__banner<?php if($banner = bb_profile_banner()): ?> staff__banner--custom<?php endif; ?>" style="background-color: <?php echo bb_generate_colour(get_the_title()); ?>; <?php if($banner = bb_profile_banner()): ?>background-image: url(<?php echo $banner; ?>);<?php endif; ?>"></div>
-							<img class="staff__avatar" alt="" src="<?php echo bb_profile_avatar(); ?>">
-							<div class="staff__body">
-								<h1 class="staff__name"><?php echo get_the_title(); ?></h1>
-								<div class="content staff__content">
-									<?php echo bb_profile_biography(); ?>
-									<ul class="staff__social-links">
-										<?php if($link = bb_custom_field("runner_twitter", $runner)): ?>
-										<li class="staff__item">
-											<a class="staff__link" href="https://twitter.com/<?php echo $link; ?>">
-												<span class="icon icon--social-twitter staff__icon"></span>
-												@<?php echo $link; ?>
-											</a>
-										</li>
-										<?php endif; ?>
-										<?php if($link = bb_custom_field("runner_facebook", $runner)): ?>
-										<li class="staff__item">
-											<a class="staff__link" href="https://facebook.com/<?php echo $link; ?>">
-												<span class="icon icon--social-facebook staff__icon"></span>
-												/<?php echo $link; ?>
-											</a>
-										</li>
-										<?php endif; ?>
-									</ul>
-								</div>
-							</div>
-						</article>
-			<?php 
-					endif;
-				endwhile;
-			?>
-		</section>
-		<?php
-			endif; 
-			wp_reset_postdata();
-		?>
 	</main>
 
 <?php

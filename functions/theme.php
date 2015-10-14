@@ -49,17 +49,3 @@ add_action('customize_register', 'bb_theme_customizer');
 function bb_generate_colour($string) {
 	return '#' . substr(md5($string), 0, 6);
 }
-
-
-
-
-
-
-function bb_profile_banner($id) {
-  if($image = get_field("runner_banner", $id)) {
-    return $image['sizes']['large'];
-  }
-  else {
-    return false;
-  }
-}

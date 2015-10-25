@@ -31,4 +31,38 @@
 			margin-top: 10px;
 		}
 	}
+	.article__media {
+		&--left {
+			@include mq(tos, true) {
+				max-width: 170px;
+			}
+			@include mq(tng, true) {
+				margin-left: -190px;
+			}
+		}
+		&--right {
+			@include mq(tng, true) {
+				max-width: 300px;
+				margin-right: 0;
+			}
+			@include mq(ds9) {
+				margin-right: -240px;
+			}
+			@include mq(voy, true) {
+				margin-right: -320px;
+			}
+		}
+		&--center {
+			@include mq(tng, true) {
+				margin-left: -190px;
+				margin-right: 0;
+			}
+			@include mq(ds9) {
+				margin-right: -240px;
+			}
+			@include mq(voy, true) {
+				margin-right: -320px;
+			}
+		}
+	}
 }

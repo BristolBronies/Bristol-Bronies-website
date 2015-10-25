@@ -20,7 +20,6 @@
 	&__media {
 		margin-top: 20px;
 		margin-bottom: 20px;
-		background-color: palette(shade, lightest);
 		text-align: center;
 		&--left {
 			@include mq(tos, true) {
@@ -31,7 +30,10 @@
 				clear: left;
 			}
 			@include mq(tng, true) {
-				margin-left: -190px;
+				margin-left: -80px;
+			}
+			@include mq(ds9, true) {
+				margin-left: -160px;
 			}
 		}
 		&--right {
@@ -39,26 +41,23 @@
 				max-width: 300px;
 				margin-top: 0; // Floating images makes top margin no longer collapse, so remove it
 				margin-left: 20px;
+				margin-right: -80px;
 				float: right;
 				clear: right;
 			}
 			@include mq(ds9) {
-				margin-right: -240px;
-			}
-			@include mq(voy, true) {
-				margin-right: -320px;
+				margin-right: -160px;
 			}
 		}
 		&--center {
 			clear: both;
 			@include mq(tng, true) {
-				margin-left: -190px;
+				margin-left: -80px;
+				margin-right: -80px;
 			}
 			@include mq(ds9) {
-				margin-right: -240px;
-			}
-			@include mq(voy, true) {
-				margin-right: -320px;
+				margin-left: -160px;
+				margin-right: -160px;
 			}
 		}
 	}

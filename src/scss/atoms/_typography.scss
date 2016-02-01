@@ -1,13 +1,13 @@
 @mixin body-font {
-	font-family: "Source Sans Pro", "Helvetica Neue", Arial, "Liberation Sans", sans-serif;
+	font-family: "Proxima Nova", "Helvetica Neue", Arial, "Liberation Sans", sans-serif;
 	font-size: $base-font-size;
-	font-weight: 300;
+	font-weight: 400;
 	line-height: 1.375;
 }
 
 @mixin header-font {
-	font-family: Lato, sans-serif;
-	font-weight: 900;
+	font-family: "Proxima Nova", "Helvetica Neue", Arial, "Liberation Sans", sans-serif;
+	font-weight: 700;
 }
 
 @mixin header-janeway {

@@ -5,8 +5,8 @@
 	<!-- Postload Javascript --> 
 	<script type="text/javascript">
 		WebFontConfig = {
-			google: { 
-				families: [ 'Source+Sans+Pro:300,400,300italic,400italic:latin', 'Lato:900,900italic:latin' ] 
+			typekit: { 
+				id: "rvj6shm" 
 			},
 			custom: { 
 				families: [ 'Icons' ], 

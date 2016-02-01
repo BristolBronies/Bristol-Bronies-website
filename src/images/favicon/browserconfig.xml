@@ -2,11 +2,11 @@
 <browserconfig>
   <msapplication>
     <tile>
-      <square70x70logo src="/wp-content/themes/bristolian/dst/images/favicon/mstile-70x70.png?v=RyywKjJ0xk"/>
-      <square150x150logo src="/wp-content/themes/bristolian/dst/images/favicon/mstile-150x150.png?v=RyywKjJ0xk"/>
-      <square310x310logo src="/wp-content/themes/bristolian/dst/images/favicon/mstile-310x310.png?v=RyywKjJ0xk"/>
-      <wide310x150logo src="/wp-content/themes/bristolian/dst/images/favicon/mstile-310x150.png?v=RyywKjJ0xk"/>
-      <TileColor>#b91d47</TileColor>
+      <square70x70logo src="/wp-content/themes/bristolian/dst/images/favicon/mstile-70x70.png?v=Ommgbzxjag"/>
+      <square150x150logo src="/wp-content/themes/bristolian/dst/images/favicon/mstile-150x150.png?v=Ommgbzxjag"/>
+      <square310x310logo src="/wp-content/themes/bristolian/dst/images/favicon/mstile-310x310.png?v=Ommgbzxjag"/>
+      <wide310x150logo src="/wp-content/themes/bristolian/dst/images/favicon/mstile-310x150.png?v=Ommgbzxjag"/>
+      <TileColor>#da532c</TileColor>
     </tile>
   </msapplication>
 </browserconfig>
